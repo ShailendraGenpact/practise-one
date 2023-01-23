@@ -15,35 +15,41 @@ export class AppComponent  {
   }
 
   fun3(){
-    // let one = {id : 1 };
-    // let two = {name : "def"};
-
-    // let three = Object.assign(two, one);
-    // console.log("######", three);
-    // three.id = 11111;
-    // three.name = "hkjhkh"
-    // console.log("$$$$$$$$$$", one);
-    // console.log("%%%%%%%%%%%", two);
-
-  }
-
-  fun2(){ // not deep clone
-
     let one = {id : 1,  add : "ghaziabad"};
     let two = {name : "def"};
 
-    let three = {...one, ...two};
+    let three = Object.assign(two, one);
     console.log("@@@@@@@@@", three);
 
     three.id = 76;
     three.name ="shailendra";
-    one.id = 999;
+  //  one.id = 999;
     two.name ="hhhhh";
 
     console.log("#########", three);
 
     console.log("one", one);
-    console.log("two", two)
+    console.log("two", two);
+
+  }
+
+  fun2(){ // not deep clone
+
+    // let one = {id : 1,  add : "ghaziabad"};
+    // let two = {name : "def"};
+
+    // let three = {...one, ...two};
+    // console.log("@@@@@@@@@", three);
+
+    // three.id = 76;
+    // three.name ="shailendra";
+    // one.id = 999;
+    // two.name ="hhhhh";
+
+    // console.log("#########", three);
+
+    // console.log("one", one);
+    // console.log("two", two)
   }
 
   fun1(){
